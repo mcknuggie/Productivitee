@@ -1,0 +1,108 @@
+body
+{
+    margin: 0;
+    height: 100px;
+    width: 200px;
+    background-color: black;
+
+}
+div
+{    
+    text-align: center;
+    color: white;
+}
+span
+{
+    font-size: 20px;;
+    color: white;
+}
+[data-host="www.youtube.com"]
+{
+    color: #eb3223;
+    font-size: 22px;
+}
+[data-host="www.twitch.tv"]
+{
+    color: #8652f6;
+    font-size: 22px;
+}
+[data-host="www.facebook.com"]
+{
+    color: #3581e5;
+    font-size: 22px;
+}
+[data-host="www.netflix.com"]
+{
+    color: #d32f27;
+    font-size: 22px;
+}
+[data-host="www.reddit.com"]
+{
+    color: #ec5428;
+    font-size: 22px;
+}
+[data-host="www.hulu.com"]
+{
+    color: #6de38d;
+    font-size: 22px;
+}
+[data-host="www.twitter.com"]
+{
+    color: #4aa1eb;
+    font-size: 22px;
+}
+[data-host="www.buzzfeed.com"]
+{
+    color: #dc4532;
+    font-size: 22px;
+}
+[data-host="www.disneyplus.com"]
+{
+    color: #121e4d;
+    font-size: 22px;
+}
+[data-host="play.hbomax.com"]
+{
+    color: #4425d3;
+    font-size: 22px;
+}
+[data-host="www.instagram.com"]
+{
+    color: #d13655;
+    font-size: 22px;
+}
+[data-host="www.tumblr.com"]
+{
+    color: #213762;
+    font-size: 22px;
+}
+[data-host="www.tiktok.com"]
+{
+    color: #eb445a; 
+    font-size: 22px;
+}
+.top
+{
+    padding-top: 10px;
+}
+.timer
+{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.overview_link
+{
+    padding-top: 5px;
+    color: gray;
+    padding-bottom: 5px;
+    text-decoration: none;
+}
+.overview_link:hover
+{
+    color: lightgray;
+    text-decoration: underline;
+}
+.time_summary
+{
+    text-align: left;
+}

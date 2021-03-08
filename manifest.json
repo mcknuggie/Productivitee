@@ -1,0 +1,28 @@
+{
+  "name": "Productivitee",
+  "version": "1.0",
+  "description": "Track how much time you really spend on unproctive websites.",
+  "permissions": ["activeTab", "declarativeContent", "storage", "webNavigation", "tabs"],
+  "background": {
+    "scripts": ["timing.js"],
+    "persistent": false
+  },
+
+  "page_action": {
+    "default_popup": "timer_popup.html",
+    "default_icon": {
+      "16": "images/Logo.png",
+      "32": "images/Logo.png",
+      "48": "images/Logo.png",
+      "128": "images/Logo.png"
+    },
+    "default_title": "Productivitee"
+  },
+  "icons": {
+    "16": "images/Logo.png",
+    "32": "images/Logo.png",
+    "48": "images/Logo.png",
+    "128": "images/Logo.png"
+  },
+  "manifest_version": 2
+}
