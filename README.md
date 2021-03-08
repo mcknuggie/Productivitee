@@ -1,5 +1,7 @@
 # Welcome to Productivitee!
 
+This is my CS50 final project from Fall 2020.
+
 Link to introduction video: https://youtu.be/IdzR7Ra9kBI
 
 ## Description
