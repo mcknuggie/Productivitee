@@ -90,14 +90,14 @@ span
     padding-top: 5px;
     padding-bottom: 5px;
 }
-.overview_link
+.link
 {
     padding-top: 5px;
     color: gray;
     padding-bottom: 5px;
     text-decoration: none;
 }
-.overview_link:hover
+.link:hover
 {
     color: lightgray;
     text-decoration: underline;

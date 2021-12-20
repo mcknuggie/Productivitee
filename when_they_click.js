@@ -2,22 +2,24 @@
  * when_they_click.js
  * Runs when they click the extension icon.
  */
+debugger;
 
-
-var hostName;
-var websiteSeconds;
-var totalSeconds = 0;
+let hostName;
+let websiteSeconds;
+const totalSeconds = 0;
 // runtime.id dynamically gets the current id of the extension
-var timeSummaryLink = "chrome-extension://" + chrome.runtime.id + "/overview.html";
+let timeSummaryLink = "chrome-extension://" + chrome.runtime.id + "/overview.html";
 // "link" is a an id referring to the time summary <a> tag that brings the user to the time summary
-link.setAttribute("href", timeSummaryLink);
+const overviewLink = document.getElementById("overview_link");
+overviewLink.setAttribute("href", timeSummaryLink);
 
-chrome.storage.local.get(["hostName"], function(data) {
-    hostName = data.hostName;   
+chrome.storage.local.get(["hostName"], function(hostData) {
+    hostName = hostData.hostName;   
 
-    var element = document.getElementById("host_text")
+    let element = document.getElementById("host_text")
     element.setAttribute("data-host", hostName)
     element.innerHTML = parseName(hostName); // display just the isolated name of the website
+
 });
 
 
@@ -60,7 +62,7 @@ function updateTime() {
  * Converts an integer to a two digit string
  */
 function adjust(value) {
-    var num_string = value + "";
+    let num_string = value + "";
     if (num_string.length < 2) {
         return "0" + num_string;
     } else {

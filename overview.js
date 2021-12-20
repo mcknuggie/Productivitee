@@ -8,6 +8,9 @@ var websiteSeconds;
 var totalSeconds = 0;
 var sites;
 
+let timerLinkUrl = "chrome-extension://" + chrome.runtime.id + "/timer_popup.html";
+const overviewLink = document.getElementById("timer_link");
+overviewLink.setAttribute("href", timerLinkUrl);
 
 var trackedSites = [
     "www.youtube.com",
@@ -25,9 +28,21 @@ var trackedSites = [
     "www.tiktok.com"
 ];
 
+
+
 chrome.storage.local.get(["trackedSites"], function(data) {
     sites = data["trackedSites"];
 
+    // before we do anything else, let's check if we're on a valid page.
+    chrome.storage.local.get(["hostName"], function(hostData) {
+        hostName = hostData.hostName;
+    
+        if (!(hostName in sites)) {
+            // get rid of back button!
+            document.getElementById("timer_link").setAttribute("hidden", "true");
+        } 
+    
+    });
 
     for (i = 0; i < trackedSites.length; i++) // go through each tracked website...
     {
