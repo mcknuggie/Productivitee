@@ -3,34 +3,6 @@
  * Runs in the background ONCE when extension is initially loaded
  */
 
-chrome.runtime.onInstalled.addListener(function() {
-
-    // Remove the current rules 
-    chrome.declarativeContent.onPageChanged.removeRules(undefined, function() {
-        // Replace the current rules
-        chrome.declarativeContent.onPageChanged.addRules([
-            {
-                conditions: [
-        /*
-        Create a new event Object with PageStateMatcher that
-        matches page urls that follow http and https schemes
-        */
-        new chrome.declarativeContent.PageStateMatcher({
-                        pageUrl: {
-                            // hostEquals: 
-                            schemes: ['http', 'https']
-                        }
-                    })
-        ], 
-                actions: [
-            /*
-            displays the page action
-            */
-            new chrome.declarativeContent.ShowPageAction()
-        ]
-        }])
-    })
-});
 
 var trackedSites = [
     "www.youtube.com", //red
@@ -144,7 +116,7 @@ function getHost(url) {
 function setTime() {  
 
     chrome.storage.local.get(["trackedSites"], function(data) {
-        sites = data["trackedSites"];
+        let sites = data["trackedSites"];
         sites[hostName]++; // website-specific seconds incremented
         chrome.storage.local.set({ "trackedSites": sites })
     });

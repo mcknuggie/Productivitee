@@ -2,11 +2,10 @@
  * when_they_click.js
  * Runs when they click the extension icon.
  */
-debugger;
 
 let hostName;
 let websiteSeconds;
-const totalSeconds = 0;
+// const totalSeconds = 0;
 // runtime.id dynamically gets the current id of the extension
 let timeSummaryLink = "chrome-extension://" + chrome.runtime.id + "/overview.html";
 // "link" is a an id referring to the time summary <a> tag that brings the user to the time summary

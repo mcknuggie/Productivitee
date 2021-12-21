@@ -56,10 +56,7 @@ chrome.storage.local.get(["trackedSites"], function(data) {
 
 
 
-
-
 //functions
-
 
 /*
  * updates the time based on the host it's given by assigning the element id for the corresponding host/website.

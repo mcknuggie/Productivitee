@@ -5,7 +5,7 @@
   "permissions": ["activeTab", "declarativeContent", "storage", "webNavigation", "tabs"],
   "background": {
     "scripts": ["timing.js"],
-    "persistent": false
+    "persistent": true
   },
 
   "page_action": {
